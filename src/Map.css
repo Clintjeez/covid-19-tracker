@@ -8,7 +8,6 @@
 }
 .map .leaflet-container {
   height: 100%;
-  border: red 1px solid;
 }
 
 .info-flag img {
