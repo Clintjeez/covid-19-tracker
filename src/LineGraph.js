@@ -46,7 +46,7 @@ const options = {
   },
 };
 
-function LineGraph({ casesType = "casesType" }) {
+function LineGraph({ casesType = "casesType", ...props }) {
   const [data, setData] = useState({});
 
   const buildChartData = (data, casesType = "cases") => {
@@ -79,8 +79,7 @@ function LineGraph({ casesType = "casesType" }) {
   }, [casesType]);
 
   return (
-    <div>
-      <h1>Line graph</h1>
+    <div className={props.className}>
       {data?.length > 0 && (
         <Line
           options={options}
